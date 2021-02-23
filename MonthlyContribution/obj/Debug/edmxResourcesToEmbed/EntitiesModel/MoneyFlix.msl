@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MonthlyContributionModelStoreContainer" CdmEntityContainer="MonthlyContributionEntities">
+    <EntitySetMapping Name="Bcs">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Bc">
+        <MappingFragment StoreEntitySet="Bc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="monthlyContryPerPerson" ColumnName="monthlyContryPerPerson" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="statusCode" ColumnName="statusCode" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="totalMember" ColumnName="totalMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BcMembers">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.BcMember">
+        <MappingFragment StoreEntitySet="BcMembers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="statusCode" ColumnName="statusCode" />
+          <ScalarProperty Name="Hand" ColumnName="Hand" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eight_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Eight_mR">
+        <MappingFragment StoreEntitySet="Eight_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eleven_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Eleven_mR">
+        <MappingFragment StoreEntitySet="Eleven_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fifth_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Fifth_mR">
+        <MappingFragment StoreEntitySet="Fifth_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="First_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.First_mR">
+        <MappingFragment StoreEntitySet="First_mR">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="bcid" ColumnName="bcid" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fourth_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Fourth_mR">
+        <MappingFragment StoreEntitySet="Fourth_mR">
+          <ScalarProperty Name="bcid" ColumnName="bcid" />
+          <ScalarProperty Name="membersId" ColumnName="membersId" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="emailId" ColumnName="emailId" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="statusCode" ColumnName="statusCode" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nine_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Nine_mR">
+        <MappingFragment StoreEntitySet="Nine_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pmethods">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Pmethod">
+        <MappingFragment StoreEntitySet="Pmethod">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="accountNumber" ColumnName="accountNumber" />
+          <ScalarProperty Name="ifscCode" ColumnName="ifscCode" />
+          <ScalarProperty Name="accHName" ColumnName="accHName" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Second_R">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Second_R">
+        <MappingFragment StoreEntitySet="Second_R">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seven_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Seven_mR">
+        <MappingFragment StoreEntitySet="Seven_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sixth_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Sixth_mR">
+        <MappingFragment StoreEntitySet="Sixth_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teen_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Teen_mR">
+        <MappingFragment StoreEntitySet="Teen_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Third_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Third_mR">
+        <MappingFragment StoreEntitySet="Third_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Twelve_mR">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.Twelve_mR">
+        <MappingFragment StoreEntitySet="Twelve_mR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="CollectedAmount" ColumnName="CollectedAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bcId" ColumnName="bcId" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="statusCode" ColumnName="statusCode" />
+          <ScalarProperty Name="createdat" ColumnName="createdat" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="membersId" ColumnName="membersId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fourt_mr">
+      <EntityTypeMapping TypeName="MonthlyContributionModel.fourt_mr">
+        <MappingFragment StoreEntitySet="fourt_mr">
+          <ScalarProperty Name="bcName" ColumnName="bcName" />
+          <ScalarProperty Name="updatedAt" ColumnName="updatedAt" />
+          <ScalarProperty Name="bcid" ColumnName="bcid" />
+          <ScalarProperty Name="membersId" ColumnName="membersId" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="paidAmount" ColumnName="paidAmount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="monthlyAmount" ColumnName="monthlyAmount" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

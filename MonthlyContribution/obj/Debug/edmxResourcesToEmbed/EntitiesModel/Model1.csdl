@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MonthlyContributionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="totalAmount" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="duration" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyContryPerPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="0" />
+    <Property Name="endDate" Type="DateTime" Precision="0" />
+    <Property Name="statusCode" Type="Boolean" />
+    <Property Name="createdAt" Type="DateTime" Precision="3" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="totalMember" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BcMember">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="statusCode" Type="Boolean" />
+    <Property Name="Hand" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="memberName" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Eight_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Eleven_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Fifth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="First_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="collectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcid" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fourt_mr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="collectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="membersId" Type="Int32" />
+    <Property Name="bcid" Type="Int32" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Fourth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="collectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="membersId" Type="Int32" />
+    <Property Name="bcid" Type="Int32" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="emailId" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="statusCode" Type="Boolean" />
+    <Property Name="createdAt" Type="DateTime" Precision="3" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Nine_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Pmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="accountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ifscCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="accHName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Second_R">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Seven_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sixth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teen_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Third_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Twelve_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monthlyAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paidAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CollectedAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="bcId" Type="Int32" Nullable="false" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="bcName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="password" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="statusCode" Type="Boolean" />
+    <Property Name="createdat" Type="DateTime" Precision="3" />
+    <Property Name="updatedAt" Type="DateTime" Precision="3" />
+    <Property Name="membersId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ConfirmPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MonthlyContributionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bcs" EntityType="Self.Bc" />
+    <EntitySet Name="BcMembers" EntityType="Self.BcMember" />
+    <EntitySet Name="Eight_mR" EntityType="Self.Eight_mR" />
+    <EntitySet Name="Eleven_mR" EntityType="Self.Eleven_mR" />
+    <EntitySet Name="Fifth_mR" EntityType="Self.Fifth_mR" />
+    <EntitySet Name="First_mR" EntityType="Self.First_mR" />
+    <EntitySet Name="fourt_mr" EntityType="Self.fourt_mr" />
+    <EntitySet Name="Fourth_mR" EntityType="Self.Fourth_mR" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Nine_mR" EntityType="Self.Nine_mR" />
+    <EntitySet Name="Pmethods" EntityType="Self.Pmethod" />
+    <EntitySet Name="Second_R" EntityType="Self.Second_R" />
+    <EntitySet Name="Seven_mR" EntityType="Self.Seven_mR" />
+    <EntitySet Name="Sixth_mR" EntityType="Self.Sixth_mR" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Teen_mR" EntityType="Self.Teen_mR" />
+    <EntitySet Name="Third_mR" EntityType="Self.Third_mR" />
+    <EntitySet Name="Twelve_mR" EntityType="Self.Twelve_mR" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>

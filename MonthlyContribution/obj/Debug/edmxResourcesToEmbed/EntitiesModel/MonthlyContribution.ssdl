@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MonthlyContributionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullName" Type="varchar" MaxLength="30" />
+    <Property Name="totalAmount" Type="varchar" MaxLength="20" />
+    <Property Name="duration" Type="varchar" MaxLength="30" />
+    <Property Name="monthlyContryPerPerson" Type="varchar" MaxLength="20" />
+    <Property Name="startDate" Type="date" />
+    <Property Name="endDate" Type="date" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdAt" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="totalMember" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="BcMembers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="membersId" Type="int" Nullable="false" />
+    <Property Name="statusCode" Type="bit" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullName" Type="varchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="12" />
+    <Property Name="emailId" Type="nvarchar" MaxLength="40" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="city" Type="varchar" MaxLength="20" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdAt" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MonthlyTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="membersId" Type="int" Nullable="false" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="20" />
+    <Property Name="paidDate" Type="varchar" MaxLength="20" />
+    <Property Name="actualAmount" Type="varchar" MaxLength="20" />
+    <Property Name="fineAmount" Type="varchar" MaxLength="20" />
+    <Property Name="udatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="1000" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdat" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="membersId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ConfirmPassword" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BcMemers_Bc">
+    <End Role="Bc" Type="Self.Bc" Multiplicity="1" />
+    <End Role="BcMembers" Type="Self.BcMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BcMembers">
+        <PropertyRef Name="bcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_BcMembers">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="BcMembers" Type="Self.BcMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BcMembers">
+        <PropertyRef Name="membersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_monthlyTransaction_Bc">
+    <End Role="Bc" Type="Self.Bc" Multiplicity="1" />
+    <End Role="MonthlyTransaction" Type="Self.MonthlyTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MonthlyTransaction">
+        <PropertyRef Name="bcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_monthlyTransaction_BcMembers">
+    <End Role="BcMembers" Type="Self.BcMembers" Multiplicity="1" />
+    <End Role="MonthlyTransaction" Type="Self.MonthlyTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BcMembers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MonthlyTransaction">
+        <PropertyRef Name="membersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_UserLogin_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="membersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MonthlyContributionModelStoreContainer">
+    <EntitySet Name="Bc" EntityType="Self.Bc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BcMembers" EntityType="Self.BcMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonthlyTransaction" EntityType="Self.MonthlyTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BcMemers_Bc" Association="Self.FK_BcMemers_Bc">
+      <End Role="Bc" EntitySet="Bc" />
+      <End Role="BcMembers" EntitySet="BcMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_BcMembers" Association="Self.FK_Members_BcMembers">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="BcMembers" EntitySet="BcMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_monthlyTransaction_Bc" Association="Self.FK_monthlyTransaction_Bc">
+      <End Role="Bc" EntitySet="Bc" />
+      <End Role="MonthlyTransaction" EntitySet="MonthlyTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_monthlyTransaction_BcMembers" Association="Self.FK_monthlyTransaction_BcMembers">
+      <End Role="BcMembers" EntitySet="BcMembers" />
+      <End Role="MonthlyTransaction" EntitySet="MonthlyTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_UserLogin_Members" Association="Self.Fk_UserLogin_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MonthlyContributionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullName" Type="varchar" MaxLength="30" />
+    <Property Name="totalAmount" Type="varchar" MaxLength="20" />
+    <Property Name="duration" Type="varchar" MaxLength="30" />
+    <Property Name="monthlyContryPerPerson" Type="varchar" MaxLength="20" />
+    <Property Name="startDate" Type="date" />
+    <Property Name="endDate" Type="date" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdAt" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="totalMember" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="BcMembers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="Hand" Type="varchar" MaxLength="10" />
+    <Property Name="memberName" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Eight_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Eleven_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Fifth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="First_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="20" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="collectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcid" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="fourt_mr">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="collectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="membersId" Type="int" />
+    <Property Name="bcid" Type="int" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Fourth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="collectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="membersId" Type="int" />
+    <Property Name="bcid" Type="int" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullName" Type="varchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="12" />
+    <Property Name="emailId" Type="nvarchar" MaxLength="40" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="city" Type="varchar" MaxLength="20" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdAt" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Nine_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Pmethod">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="paymentType" Type="varchar" MaxLength="50" />
+    <Property Name="mobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="accountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ifscCode" Type="varchar" MaxLength="50" />
+    <Property Name="accHName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Second_R">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Seven_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sixth_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Teen_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Third_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Twelve_mR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberName" Type="varchar" MaxLength="50" />
+    <Property Name="monthlyAmount" Type="varchar" MaxLength="50" />
+    <Property Name="interest" Type="varchar" MaxLength="50" />
+    <Property Name="paidAmount" Type="varchar" MaxLength="50" />
+    <Property Name="CollectedAmount" Type="varchar" MaxLength="50" />
+    <Property Name="memberId" Type="int" Nullable="false" />
+    <Property Name="bcId" Type="int" Nullable="false" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="bcName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="1000" />
+    <Property Name="statusCode" Type="bit" />
+    <Property Name="createdat" Type="datetime" />
+    <Property Name="updatedAt" Type="datetime" />
+    <Property Name="membersId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MonthlyContributionModelStoreContainer">
+    <EntitySet Name="Bc" EntityType="Self.Bc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BcMembers" EntityType="Self.BcMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eight_mR" EntityType="Self.Eight_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eleven_mR" EntityType="Self.Eleven_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fifth_mR" EntityType="Self.Fifth_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="First_mR" EntityType="Self.First_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fourt_mr" EntityType="Self.fourt_mr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fourth_mR" EntityType="Self.Fourth_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nine_mR" EntityType="Self.Nine_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pmethod" EntityType="Self.Pmethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Second_R" EntityType="Self.Second_R" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Seven_mR" EntityType="Self.Seven_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sixth_mR" EntityType="Self.Sixth_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teen_mR" EntityType="Self.Teen_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Third_mR" EntityType="Self.Third_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Twelve_mR" EntityType="Self.Twelve_mR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
